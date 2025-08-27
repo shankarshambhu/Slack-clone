@@ -18,15 +18,18 @@ const PORT = process.env.PORT;
 
 app.use("/api/inngest", serve({ client: inngest, functions }));
 
+app.get('/', () => {
+    console.log('welcome world');
 
+})
 
 const startServer = async () => {
     try {
         await connectDb();
-        if(process.env.NODE_ENV!=="production")
-        app.listen(PORT, () => {
-            console.log(`Server is running at port ${PORT}`);
-        });
+        if (process.env.NODE_ENV !== "production")
+            app.listen(PORT, () => {
+                console.log(`Server is running at port ${PORT}`);
+            });
 
 
     } catch (error) {
