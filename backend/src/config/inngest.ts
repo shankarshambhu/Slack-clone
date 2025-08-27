@@ -10,7 +10,6 @@ const createUser = inngest.createFunction(
     async ({ event }) => {
         await connectDb();
         const { id, first_name, last_name, email_addresses, image_url } = event.data;
-        console.log(event.data);
 
         const newUser = {
             clerkId: id,
@@ -19,6 +18,8 @@ const createUser = inngest.createFunction(
             image: image_url
         }
         await User.create(newUser);
+        console.log('user created');
+        
 
     }
 )
@@ -34,4 +35,4 @@ const deleteUser = inngest.createFunction(
     }
 )
 
-export const functions = [createUser];
+export const functions = [createUser,deleteUser];
