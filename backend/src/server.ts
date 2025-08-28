@@ -19,7 +19,7 @@ const PORT = process.env.PORT;
 app.use("/api/inngest", serve({ client: inngest, functions }));
 
 app.get('/', (req, res) => {
-    res.json({ msg: "hello world " })
+    res.send('hello world ');
 
 })
 
