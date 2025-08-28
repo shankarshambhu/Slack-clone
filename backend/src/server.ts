@@ -20,7 +20,6 @@ app.use("/api/inngest", serve({ client: inngest, functions }));
 
 app.get('/', (req, res) => {
     res.send('hello world ');
-
 })
 
 const startServer = async () => {
