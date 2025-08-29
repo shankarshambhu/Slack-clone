@@ -17,7 +17,6 @@ const app = express();
 
 app.use(clerkMiddleware());
 app.use(express.json());
-app.use(bodyParser.json());
 
 
 const PORT = process.env.PORT;
