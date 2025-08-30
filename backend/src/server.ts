@@ -5,10 +5,8 @@ import { connectDb } from './config/db';
 import { clerkMiddleware } from '@clerk/express';
 import { serve } from "inngest/express";
 import { inngest, functions } from './config/inngest';
-import bodyParser from 'body-parser';
 import chatRouter from './routes/chat.route';
 import * as Sentry from "@sentry/node"
-
 
 
 
